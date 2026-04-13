@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>h3xsec — CTF Team & Pentesting Community</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#" class="nav-logo">h3x<span>sec</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#features">what_we_do</a></li>
+      <li><a href="#ctfs">ctf_history</a></li>
+      <li><a href="#discord">discord</a></li>
+    </ul>
+    <a href="#discord" class="nav-cta">join us</a>
+  </nav>
+
+ <!-- HERO -->
+  <section id="hero">
+    <svg class="corner-decor" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="130" cy="130" r="120" stroke="#7c3aed" stroke-width="1"/>
+      <circle cx="130" cy="130" r="90"  stroke="#7c3aed" stroke-width="0.5" stroke-dasharray="4 6"/>
+      <circle cx="130" cy="130" r="60"  stroke="#a855f7" stroke-width="1"/>
+      <circle cx="130" cy="130" r="30"  stroke="#a855f7" stroke-width="0.5" stroke-dasharray="2 4"/>
+      <line x1="10"  y1="130" x2="250" y2="130" stroke="#7c3aed" stroke-width="0.5"/>
+      <line x1="130" y1="10"  x2="130" y2="250" stroke="#7c3aed" stroke-width="0.5"/>
+      <line x1="44"  y1="44"  x2="216" y2="216" stroke="#7c3aed" stroke-width="0.3"/>
+      <line x1="216" y1="44"  x2="44"  y2="216" stroke="#7c3aed" stroke-width="0.3"/>
+      <polygon points="130,10 148,50 130,40 112,50" fill="#7c3aed" opacity="0.6"/>
+    </svg>
+
+    <p class="hero-label"> h3xsec — ctf team &amp; pentesting community</p>
+
+    <h1 class="hero-title">
+      <span class="glitch" data-text="EVERYTHING IS">EVERYTHING IS</span><br>
+      <span class="accent">OPEN SOURCE</span> <span class="dim">///</span><br>
+      <span class="accent">IF YOU KNOW</span><br>
+      <span class="accent">ASSEMBLY</span>
+    </h1>
+
+    <p class="hero-sub">
+      We solve challenges. We break systems. We learn by doing.<br>
+      PWN, WEB, REV, CRYPTO, and everything in between.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#discord" class="btn-primary">join discord</a>
+      <a href="#ctfs"    class="btn-ghost">view ctf history</a>
+    </div>
+
+    <p class="scroll-hint">scroll to explore</p>
+
+    <!-- NOW PLAYING WIDGET -->
+    <div class="now-playing" id="nowPlaying">
+      <!-- Vinyl record -->
+      <div class="np-vinyl" id="npVinyl">
+        <div class="np-vinyl-inner"></div>
+        <div class="np-vinyl-label">
+          <span>h3x</span>
+        </div>
+      </div>
+
+      <!-- Info + controls -->
+      <div class="np-info">
+        <div class="np-top">
+          <div class="np-badge">NOW PLAYING</div>
+          <div class="np-bars" id="npBars">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="np-track">h3xsec_theme</div>
+        <div class="np-artist">h3xsec_theme.mp3</div>
+
+        <!-- Progress -->
+        <div class="np-progress-wrap">
+          <span class="np-time" id="npCurrentTime">0:00</span>
+          <div class="np-progress-bar">
+            <div class="np-progress-fill" id="npFill"></div>
+          </div>
+          <span class="np-time">2:47</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="np-controls">
+          <button class="np-btn" id="npPrev" title="Previous">&#9664;&#9664;</button>
+          <button class="np-btn np-btn-play" id="npPlayPause" title="Play/Pause">
+            <span id="npIcon">&#9646;&#9646;</span>
+          </button>
+          <button class="np-btn" id="npNext" title="Next">&#9654;&#9654;</button>
+        </div>
+      </div>
+    </div>
+
+    <audio id="npAudio" loop>
+      <source src="./h3xsec.mp3" type="audio/mpeg" />
+    </audio>
+
+  </section>
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item reveal">
+      <span class="stat-number">600+</span>
+      <span class="stat-label">community members</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-number">10+</span>
+      <span class="stat-label">ctfs competed</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-number">top 10%</span>
+      <span class="stat-label">ctftime rating</span>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-number">24/7</span>
+      <span class="stat-label">active community</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+<section id="about">
+  <div class="about-text reveal">
+    <p class="section-label">about</p>
+    <h2 class="section-title">We solve problems.<br>We break systems.</h2>
+
+    <p>H3XSEC is a competitive CTF team and security-focused community for people who want to build real offensive skills.</p>
+
+    <p>We work through challenges together, share knowledge, and improve through practice. From first solves to advanced exploitation, everyone is expected to contribute and learn.</p>
+
+    <p>Most activity happens on Discord: live collaboration during CTFs, focused channels per category, and a growing archive of writeups and resources.</p>
+  </div>
+
+  <div class="about-visual reveal">
+    <div class="terminal-box">
+      <div class="terminal-header">
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <div class="terminal-dot"></div>
+        <span class="terminal-title">h3xsec@kali:~</span>
+      </div>
+      <div class="terminal-body">
+        <div><span class="t-prompt">h3xsec@kali</span><span class="t-dim">:</span><span class="t-cyan">~</span><span class="t-dim">$ </span><span class="t-cmd">whoami</span></div>
+        <div class="t-out">h3xsec — ctf team</div>
+        <br>
+
+        <div><span class="t-prompt">h3xsec@kali</span><span class="t-dim">:</span><span class="t-cyan">~</span><span class="t-dim">$ </span><span class="t-cmd">cat specialties.txt</span></div>
+        <div class="t-out">pwn | web | rev | crypto | osint</div>
+        <br>
+
+        <div><span class="t-prompt">h3xsec@kali</span><span class="t-dim">:</span><span class="t-cyan">~</span><span class="t-dim">$ </span><span class="t-cmd">status</span></div>
+        <div class="t-out">members: 600+</div>
+        <div class="t-out">state: recruiting</div>
+        <br>
+
+        <div><span class="t-prompt">h3xsec@kali</span><span class="t-dim">:</span><span class="t-cyan">~</span><span class="t-dim">$ </span><span class="t-cmd">join --discord<span class="cursor"></span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="features-header reveal">
+      <p class="section-label">what we do</p>
+      <h2 class="section-title">Everything a <em>hacker needs</em></h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <span class="feature-icon">🏁</span>
+        <h3>CTF Competitions</h3>
+        <p>We compete in top-tier CTFs year-round — from beginner-friendly jeopardies to elite international events. We coordinate, collab, and pwn together.</p>
+        <span class="feature-number">01</span>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🔴</span>
+        <h3>Red Teaming</h3>
+        <p>Labs, pentesting practice, and red-vs-blue exercises. Real-world attack scenarios to hone your offensive security tradecraft.</p>
+        <span class="feature-number">02</span>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">📝</span>
+        <h3>Writeups &amp; Research</h3>
+        <p>Post-challenge writeups, vulnerability research, and deep-dives shared within the community. Learn from every solve, even the ones you didn't finish.</p>
+        <span class="feature-number">03</span>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🧠</span>
+        <h3>Knowledge Base</h3>
+        <p>A living, growing library of notes, tools, cheatsheets, and guides across every security domain — curated by the community.</p>
+        <span class="feature-number">04</span>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">💬</span>
+        <h3>Discord Community</h3>
+        <p>Channels for every category. Voice rooms always active during CTFs. A place to ask questions, share findings, and network with real practitioners.</p>
+        <span class="feature-number">05</span>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">⚡</span>
+        <h3>Skill Building</h3>
+        <p>Regular internal challenges, workshops, and study groups. Whether you're new to pwn or a seasoned reverser, there's always more to learn.</p>
+        <span class="feature-number">06</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTF HISTORY -->
+  <section id="ctfs">
+    <div class="reveal">
+      <p class="section-label">ctf history</p>
+      <h2 class="section-title">Recent <em>Competitions</em></h2>
+    </div>
+
+    <div class="ctf-table-wrap reveal">
+      <table class="ctf-table">
+        <thead>
+          <tr>
+            <th>competition</th>
+            <th>year</th>
+            <th>format</th>
+            <th>placement</th>
+            <th>points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ctf-name">SillyCTF 2</td>
+            <td>2026</td>
+            <td><span class="badge badge-jeopardy">Jeopardy</span></td>
+            <td class="ctf-place">#9</td>
+            <td>8,134</td>
+          </tr>
+          <tr>
+            <td class="ctf-name">CodeVinci CTF 2026</td>
+            <td>2026</td>
+            <td><span class="badge badge-mixed">Mixed</span></td>
+            <td class="ctf-place">#17</td>
+            <td>9,105</td>
+          </tr>
+          <tr>
+            <td class="ctf-name">BITSCTF 2026</td>
+            <td>2026</td>
+            <td><span class="badge badge-awd">Jeopardy</span></td>
+            <td class="ctf-place">#5</td>
+            <td>3,638</td>
+          </tr>
+          <tr>
+            <td class="ctf-name">PascalCTF</td>
+            <td>2026</td>
+            <td><span class="badge badge-jeopardy">Jeopardy</span></td>
+            <td class="ctf-place">#41</td>
+            <td>6,536</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- DISCORD CTA -->
+  <div id="discord">
+    <div style="position: relative; z-index: 1;">
+      <p class="discord-logo">🟣</p>
+      <p class="section-label" style="display: flex; justify-content: center;">community</p>
+      <h2 class="section-title">Join the <em>h3xsec</em> Discord</h2>
+      <p class="discord-sub">
+        Drop into our server, introduce yourself, and jump into the next CTF.
+        We're recruiting at all skill levels — curiosity is the only requirement.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="https://discord.gg/DBTESBYdb6" class="btn-primary">join discord server</a>
+        <a href="https://blog.h3xsec.com"" class="btn-ghost">browse writeups</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">h3x<span>sec</span></span>
+    <ul class="footer-links">
+      <li><a href="https://ctftime.org/team/422535">CTFtime</a></li>
+      <li><a href="https://discord.gg/DBTESBYdb6">Discord</a></li>
+      <li><a href="https://blog.h3xsec.com"">Writeups</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 H3XSEC</span>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
