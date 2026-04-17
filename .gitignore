@@ -1,0 +1,46 @@
+# macOS junk files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code workspace files (since you have a .code-workspace file)
+*.code-workspace
+.vscode/
+*.swp
+*.swo
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Temp files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.idea/
+*.sublime-*
+.project
+.classpath
+
+# OS generated files
+.directory
+.spotlight
+.trashes
